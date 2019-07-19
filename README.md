@@ -1,8 +1,25 @@
 # BCW-Dataset-NN
 Artificial Neural Network Estimator (tensorflow) that uses the Breast Cancer Dataset from the UCI Machine Learning Repository
 
-Author: Will Ryan
-
+## Prerequisites
+```
+1. Python 3.x+
+2. Tensorflow
+```
+### Setup
+Download tensorflow (ideally in a virtual environment)
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+brew update
+brew install python  # Python 3
+sudo pip3 install -U virtualenv  # system-wide install
+```
+```
+source ./venv/bin/activate  # sh, bash, ksh, or zsh
+pip install tensorflow
+```
+## Format of the Input Data
 Uses the Breast Cancer Wisconsin (original) Dataset:
 Format of data:
 1. Sample code number: id number 
@@ -16,19 +33,16 @@ Format of data:
 9. Normal Nucleoli: 1 - 10 
 10. Mitoses: 1 - 10 
 
-Format of Output:
+## Format of Output
 
 1. Class: (0 for benign, 1 for malignant)
 
-Uses 40000 iterations at a learning rate of 0.05
+### Accuracy
 
-Uses sigmoid activation function and the gradient descent optimizer for learning (Backpropigation)
-
-683 data points
+On 683 data points of training data
 
 Accuracy ~ 98.2%
 
-Notes: output2 is irrelevant
-My variable naming and commenting is horrible I will fix that later
-After it runs it allows you to enter a datapoint to check its estimated value (still has some bugs)
+### Notes
+output2 is irrelevant - fix later
 Stores the summaries of each run in the summary_log folder
